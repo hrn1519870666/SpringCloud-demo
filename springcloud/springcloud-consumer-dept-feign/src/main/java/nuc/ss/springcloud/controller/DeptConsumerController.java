@@ -18,17 +18,17 @@ public class DeptConsumerController {
 
     @RequestMapping("/consumer/dept/add")
     public boolean add(Dept dept) {
-        return this.deptClientService.addDept(dept);
+        return deptClientService.addDept(dept);
     }
 
     @RequestMapping("/consumer/dept/get/{id}")
     public Dept get(@PathVariable("id") Long id) {
-        return this.deptClientService.queryById(id);
+        return deptClientService.queryById(id);
     }
 
     @RequestMapping("/consumer/dept/list")
     public List<Dept> list() {
-        return this.deptClientService.queryAll();
+        return deptClientService.queryAll();
     }
 }
 
